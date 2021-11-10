@@ -5,13 +5,11 @@ labels:
   template: minio
 message: |-
   The following service(s) have been created in your project: ${NAME}.
-
   For more information about using this template, including OpenShift considerations, see https://github.com/elmanytas/minio-openshift/blob/master/README.md.
 metadata:
   annotations:
     description: |-
       A min.io service.  For more information about using this template, including OpenShift considerations, see https://github.com/elmanytas/minio-openshift/blob/master/README.md.
-
       WARNING: This template needs a default storage class with space enough.
     iconClass: icon-database
     openshift.io/display-name: min.io
@@ -87,7 +85,7 @@ objects:
               secretKeyRef:
                 key: secret-key
                 name: ${NAME}-keys
-          image: karrier/minio:RELEASE.2018-09-01T00-38-25Z
+          image: store/minio/minio:RELEASE.2020-12-29T23-29-29Z
           imagePullPolicy: IfNotPresent
           name: ${NAME}
           ports:
